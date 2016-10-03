@@ -2,8 +2,7 @@
 
 namespace Knp\Provider;
 
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use Silex\ServiceProviderInterface;
 use Silex\Application;
 
 use Knp\Console\Application as ConsoleApplication;
@@ -12,7 +11,7 @@ use Knp\Console\ConsoleEvent;
 
 class ConsoleServiceProvider implements ServiceProviderInterface
 {
-    public function register(Container $app)
+    public function register(Application $app)
     {
         $app['console'] = function() use ($app) {
 
